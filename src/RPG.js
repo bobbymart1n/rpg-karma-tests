@@ -6,13 +6,6 @@ export class User {
     this.exp = 0;
   }
 
-  enemyAttack() {
-
-  }
-
-  expGain() {
-
-  }
 
   levelUp() {
     if(this.exp === 20) {
@@ -35,12 +28,4 @@ export class Enemy {
     this.expGiven = 20;
   }
 
-  userAttack() {
-
-  }
-
-
 }
-
-exports.userObject = User;
-exports.enemyObject = Enemy;
