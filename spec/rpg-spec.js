@@ -50,6 +50,9 @@ describe('Player', function() {
   });
 
   it('should remove items from player inventory', function() {
+    player = new User();
+    player.inventory.push("candle");
+    player.inventory.pop();
     expect(player.inventory).toEqual([]);
   });
 });
