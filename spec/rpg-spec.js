@@ -27,4 +27,11 @@ describe('Player', function() {
     player.health -= mummra.damage;
     expect(player.health).toEqual(85);
   });
+
+  it('should add enemy experience number to player exp', function() {
+    player = new User();
+    mummra = new Enemy(25, 15);
+    player.exp += mummra.expGiven;
+    expect(player.exp).toEqual(20);
+  });
 });

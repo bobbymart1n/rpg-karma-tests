@@ -23,14 +23,14 @@ export class User {
 
 
 export class Enemy {
-  constructor(health, damage,) {
+  constructor(health, damage) {
     this.health = health;
     this.damage = damage;
     this.expGiven = 20;
   }
 
   userAttack() {
-    
+
   }
 
 
