@@ -42,4 +42,10 @@ describe('Player', function() {
     player.levelUp();
     expect(player.level).toEqual(2);
   });
+
+  it('should place new items in player inventory', function() {
+    player = new User();
+    player.inventory.push("candle");
+    expect(player.inventory).toEqual(["candle"])
+  });
 });

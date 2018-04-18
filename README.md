@@ -7,3 +7,4 @@
 |**Program will have enemy attack phase following character attack**| "Enemy attack" | "Enemy hit you for 5 damage" |
 |**Program will increase player experience after successful battle**| "Enemy defeated" | "Gained 20 exp" |
 |**Program will track experience which will increase level of character**| "Gained 20 exp" | "Level up!" |
+|**Program will add new items to player inventory**| "Received candle" | "Inventory: ["candle"]" |
