@@ -22,18 +22,19 @@ export class User {
 
 
 
-// export class Enemy {
-//   constructor(health, damage, expGiven) {
-//     this.health = health;
-//     this.damage = damage;
-//     this.expGiven = 20;
-//   }
-//
-//   userAttack() {
-//
-//   }
-//
-//
-// };
+export class Enemy {
+  constructor(health, damage,) {
+    this.health = health;
+    this.damage = damage;
+    this.expGiven = 20;
+  }
+
+  userAttack() {
+
+  }
+
+
+}
 
 exports.userObject = User;
+exports.enemyObject = Enemy;
