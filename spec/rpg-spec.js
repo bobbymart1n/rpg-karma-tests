@@ -48,4 +48,8 @@ describe('Player', function() {
     player.inventory.push("candle");
     expect(player.inventory).toEqual(["candle"])
   });
+
+  it('should remove items from player inventory', function() {
+    expect(player.inventory).toEqual([]);
+  });
 });
