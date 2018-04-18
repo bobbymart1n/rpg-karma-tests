@@ -1,4 +1,5 @@
-import { User, Enemy } from './../src/rpg.js';
+import { User } from './../src/user.js';
+import { Enemy } from './../src/enemy.js';
 
 describe('Player', function() {
   let player;
