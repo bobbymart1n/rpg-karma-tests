@@ -15,7 +15,13 @@ export class User {
   }
 
   levelUp() {
-
+    if(this.exp === 20) {
+      this.level = 2;
+    } else if (this.exp === 40) {
+      this.level = 3;
+    } else if (this.exp === 60) {
+      this.level = 4;
+    }
   }
 
 }

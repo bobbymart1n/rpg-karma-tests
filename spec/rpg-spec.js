@@ -34,4 +34,12 @@ describe('Player', function() {
     player.exp += mummra.expGiven;
     expect(player.exp).toEqual(20);
   });
+
+  it('should increase player level upon meeting experience threshold', function() {
+    player = new User();
+    mummra = new Enemy(25, 15);
+    player.exp += mummra.expGiven;
+    player.levelUp();
+    expect(player.level).toEqual(2);
+  });
 });
