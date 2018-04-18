@@ -1,7 +1,7 @@
 export class User {
   constructor() {
     this.health = 100;
-    this.damage = 0;
+    this.damage = 10;
     this.level = 1;
     this.exp = 0;
   }
@@ -30,7 +30,7 @@ export class Enemy {
   }
 
   userAttack() {
-
+    
   }
 
 
