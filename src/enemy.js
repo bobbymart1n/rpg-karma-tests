@@ -5,5 +5,12 @@ class Enemy {
     this.expGiven = 20;
   }
 }
+class Goblin extends Enemy {
+  constructor(health, damage) {
+    super (health, damage);
+    this.expGiven = 15;
+    this.loot = ["goblin ear", "broken belt"];
+  }
+}
 
-export { Enemy };
+export { Enemy, Goblin };

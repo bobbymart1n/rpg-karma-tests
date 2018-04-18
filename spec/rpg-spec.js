@@ -1,5 +1,5 @@
 import { User } from './../src/user.js';
-import { Enemy } from './../src/enemy.js';
+import { Enemy, Goblin } from './../src/enemy.js';
 
 describe('Player', function() {
   let player;
@@ -63,6 +63,14 @@ describe('Player', function() {
     expect(player.intell).toEqual(10);
     expect(player.dex).toEqual(5);
     expect(player.strength).toEqual(5);
+  });
+
+  it('should update player inventory based on enemy loot', function() {
+    player = new User();
+    const goblin = new Goblin();
+    goblin.loot.forEach(item => player.inventory.push(item));
+    console.log(player.inventory);
+    expect(player.inventory).toEqual(["goblin ear", "broken belt"]);
   });
 
 });
