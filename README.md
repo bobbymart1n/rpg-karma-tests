@@ -9,3 +9,4 @@
 |**Program will track experience which will increase level of character**| "Gained 20 exp" | "Level up!" |
 |**Program will add new items to player inventory**| "Received candle" | "Inventory: ["candle"]" |
 |**Program will remove items from player inventory**| "Candle has been removed" | "Inventory: []" |
+|**Program will allow user to choose class**| "Wizard" | "Wizard" |

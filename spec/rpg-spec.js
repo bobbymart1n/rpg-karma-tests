@@ -56,4 +56,13 @@ describe('Player', function() {
     player.inventory.pop();
     expect(player.inventory).toEqual([]);
   });
+
+  it('should update player stats based upon class', function() {
+    player = new User();
+    player.wizard();
+    expect(player.intell).toEqual(10);
+    expect(player.dex).toEqual(5);
+    expect(player.strength).toEqual(5);
+  });
+
 });
