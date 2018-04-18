@@ -11,3 +11,12 @@
 |**Program will remove items from player inventory**| "Candle has been removed" | "Inventory: []" |
 |**Program will allow user to choose class**| "Wizard" | "Wizard" |
 |**Program will push dead enemy loot into player inventory**| "You loot: 'Goblin Ear', and a 'Broken Belt'" | "["goblin ear", "broken belt"]" |
+
+### Notes
+* Always have a meaningful fail then commit that fail
+```
+it('should fail on first test', function() {
+  expect(example.someMethod()).toEqual(x);
+});
+```
+  * This test fails intentionally because 'someMethod()' hasn't been defined yet
