@@ -11,21 +11,26 @@ $(document).ready(function() {
   $("#playerHealth").text(player.health);
   $("#goblinHealth").text(goblin.health);
   $("#attack").click(function() {
+    $("#nikolaSprite").hide();
+    $("#nikolaGif").show();
     setTimeout(function() {
       $("#goblinSprite").hide();
       $("#goblinGif").show();
       setTimeout(function() {
+        $("#nikolaGif").hide();
+        $("#nikolaSprite").show();
         $("#goblinGif").hide();
         $("#goblinSprite").show();
       }, 940);
       if(goblin.health > 0) {
         player.enemyAttack();
+        $(".nikola-health .progress-bar").css('width', (player.health * 1) + '%');
         $("#playerHealth").text(player.health);
       }
-    }, 1000);
+    }, 2000);
     goblin.userAttack();
     $("#goblinHealth").text(goblin.health);
-    $(".progress-bar").css('width', (goblin.health * 5) + '%');
+    $(".goblin-health .progress-bar").css('width', (goblin.health * 5) + '%');
     if(goblin.health <= 0) {
       $("#attack").hide();
       $("#items").show();

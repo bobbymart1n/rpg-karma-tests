@@ -1,18 +1,28 @@
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   background: url('/../img/bg-background.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 #items {
   display: none;
 }
-#goblinGif {
+#goblinGif, #nikolaGif {
   display: none;
 }
 .goblin {
     position: absolute;
-    bottom: 50px;
-    right: 35%;
+    bottom: 470px;
+    right: 550px;
+}
+.nikola-health {
+  max-width: 150px;
+  position: relative;
+  left: 80px;
+  top: 250px;
 }
 .goblin-health {
   max-width: 150px;
