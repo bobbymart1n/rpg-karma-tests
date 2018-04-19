@@ -1,3 +1,4 @@
+import { Dice } from './dice.js';
 class User {
   constructor() {
     this.health = 100;
@@ -32,6 +33,10 @@ class User {
     } else if (this.exp === 60) {
       this.level = 4;
     }
+  }
+
+  enemyAttack() {
+    this.health -= Dice.prototype.dTwentyRoll();
   }
 }
 

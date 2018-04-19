@@ -1,5 +1,6 @@
 import { User } from './../src/user.js';
-import { Enemy, Goblin } from './../src/enemy.js';
+import { Enemy } from './../src/enemy.js';
+import { Goblin } from './../src/goblin.js';
 
 describe('Player', function() {
   let player;
@@ -12,7 +13,6 @@ describe('Player', function() {
 
   it('should insert enemy into battle scenario', function() {
     mummra = new Enemy(25, 15);
-    console.log(mummra);
   });
 
   it('should subtract player damage from enemy health', function() {
@@ -69,8 +69,31 @@ describe('Player', function() {
     player = new User();
     const goblin = new Goblin();
     goblin.loot.forEach(item => player.inventory.push(item));
-    console.log(player.inventory);
     expect(player.inventory).toEqual(["goblin ear", "broken belt"]);
+  });
+
+  it('should let player choose specific items from enemy loot', function() {
+    player = new User();
+    const goblin = new Goblin();
+    player.inventory.push(goblin.loot[0]);
+    expect(player.inventory).toEqual(["goblin ear"]);
+  });
+
+  it('should subtract health from the enemy when user attacks', function() {
+    mummra = new Enemy(25, 15);
+    mummra.userAttack();
+    expect(mummra.health).toBeLessThan(25);
+  });
+
+  it('should subtract health from the user when enemy attacks', function() {
+    player = new User();
+    player.enemyAttack();
+    expect(player.health).toBeLessThan(100);
+  });
+
+  it('should create a new goblin object', function() {
+    const goblin = new Goblin(20, 10);
+    expect(goblin.health).toEqual(20);
   });
 
 });
