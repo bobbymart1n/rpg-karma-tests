@@ -14,11 +14,13 @@ $(document).ready(function() {
     $("#nikolaSprite").hide();
     $("#nikolaGif").show();
     setTimeout(function() {
+      $("#nikolaGif").hide();
+      $("#nikolaSprite").show();
+    }, 2000);
+    setTimeout(function() {
       $("#goblinSprite").hide();
       $("#goblinGif").show();
       setTimeout(function() {
-        $("#nikolaGif").hide();
-        $("#nikolaSprite").show();
         $("#goblinGif").hide();
         $("#goblinSprite").show();
       }, 940);
@@ -27,11 +29,12 @@ $(document).ready(function() {
         $(".nikola-health .progress-bar").css('width', (player.health * 1) + '%');
         $("#playerHealth").text(player.health);
       }
-    }, 2000);
+    }, 2500);
     goblin.userAttack();
     $("#goblinHealth").text(goblin.health);
     $(".goblin-health .progress-bar").css('width', (goblin.health * 5) + '%');
     if(goblin.health <= 0) {
+      $(".goblin").hide();
       $("#attack").hide();
       $("#items").show();
       $("#goblinHealth").text(' is dead!');
@@ -39,8 +42,6 @@ $(document).ready(function() {
         player.inventory.push(item);
         $("#inventory ul").append(`<li>${item}</li>`);
       });
-      $("#goblinGif").hide();
-      $("#goblinSprite").hide();
     }
   });
 });
