@@ -11,13 +11,31 @@ $(document).ready(function() {
   $("#playerHealth").text(player.health);
   $("#goblinHealth").text(goblin.health);
   $("#attack").click(function() {
+    setTimeout(function() {
+      $("#goblinSprite").hide();
+      $("#goblinGif").show();
+      setTimeout(function() {
+        $("#goblinGif").hide();
+        $("#goblinSprite").show();
+      }, 940);
+      if(goblin.health > 0) {
+        player.enemyAttack();
+        $("#playerHealth").text(player.health);
+      }
+    }, 1000);
     goblin.userAttack();
     $("#goblinHealth").text(goblin.health);
+    $(".progress-bar").css('width', (goblin.health * 5) + '%');
     if(goblin.health <= 0) {
       $("#attack").hide();
-      $("#goblinHealth").text('You killed the Goblin!');
-      goblin.loot.forEach(item => player.inventory.push(item));
-      $("#inventory ul").append(`<li>${player.inventory}</li>`);
+      $("#items").show();
+      $("#goblinHealth").text(' is dead!');
+      goblin.loot.forEach(item => {
+        player.inventory.push(item);
+        $("#inventory ul").append(`<li>${item}</li>`);
+      });
+      $("#goblinGif").hide();
+      $("#goblinSprite").hide();
     }
   });
 });

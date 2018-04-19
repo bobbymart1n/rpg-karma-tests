@@ -1,1 +1,22 @@
-
+body {
+  background: url('/../img/bg-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#items {
+  display: none;
+}
+#goblinGif {
+  display: none;
+}
+.goblin {
+    position: absolute;
+    bottom: 50px;
+    right: 35%;
+}
+.goblin-health {
+  max-width: 150px;
+  position: relative;
+  left: 230px;
+  top: 20px;
+}
