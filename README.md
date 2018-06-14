@@ -1,3 +1,11 @@
+# RPG Karma Testing App
+A project built at Epicodus **04.18.18**
+
+## By Bobby Martin and Garnett Pruett
+
+## Description
+This project represents obtained knowledge using TDD
+
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
@@ -21,3 +29,6 @@ it('should fail on first test', function() {
 });
 ```
   * This test fails intentionally because 'someMethod()' hasn't been defined yet
+  
+This project is under the _MIT License_  
+**&copy; Bobby Martin 2018**
